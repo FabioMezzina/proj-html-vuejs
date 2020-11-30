@@ -29,7 +29,7 @@
           <!-- Nav Menu -->
           <div class="nav-menu">
             <ul class="flex">
-              <li>
+              <li class="flex ai-center">
                 <a href="#">Home</a>
                 <!-- <i chevron down> v-if -->
               </li>
@@ -96,9 +96,16 @@
                 (555) 802-1234
               </span>
             </div>
-            <input type="text" placeholder="Your Name*" class="mb20">
-            <input type="email" placeholder="Your Email*" class="mb20">
-            <input type="text" placeholder="Your Phone Number*" class="mb20">
+            <div class="input-name as-stretch mb20">
+              <label for="name"><img src="./images/image.png" alt=""></label>
+              <input id="name" type="text" placeholder="Your Name*">
+            </div>
+            <div class="input-email as-stretch mb20">
+              <input type="email" placeholder="Your Email*">
+            </div>
+            <div class="input-phone as-stretch mb20">
+              <input type="text" placeholder="Your Phone Number*">
+            </div>
             <button class="btn full-width mb20">Get a Callback</button>
             <p>By submitting my data I agree to be contacted</p>
           </div>

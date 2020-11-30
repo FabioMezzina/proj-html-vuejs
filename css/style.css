@@ -89,6 +89,10 @@ ul {
   align-items: center;
 }
 
+.as-stretch {
+  align-self: stretch;
+}
+
 .col-6 {
   width: 40%;
 }
@@ -200,16 +204,33 @@ header {
 
 /* Nav menu */
 .nav-menu ul li {
-  padding: 5px;
+  display: flex; /*debug*/
+  align-items: center; /*debug*/
+  height: 40px;
+  line-height: 40px;
+  padding: 2px 8px;
+  border-bottom: 2px solid transparent;
+  transition: .2s;
+  cursor: pointer;
 }
 
 .nav-menu ul li:not(:first-of-type) {
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+.nav-menu ul li:hover {
+  color: #f76210;
+  border-bottom: 2px solid #f76210;
 }
 
 /* Nav contacts */
 .nav-contacts ul li:not(:last-of-type) {
   margin-right: 30px;
+}
+
+.nav-contacts i {
+  margin-right: 10px;
+  color: #f76210;
 }
 
 /* HERO HEADER */
@@ -281,6 +302,17 @@ z-index: 1;
 .consultant-number span {
   color: #f76210;
   font-weight: 400;
+}
+
+.consultant .input-name {
+  position: relative;
+}
+
+.consultant .input-name label {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .consultant input {
