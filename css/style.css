@@ -20,6 +20,29 @@ body {
 }
 
 /* TYPOGRAPHY */
+p {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 72px;
+  letter-spacing: -0.04em;
+}
+
+h2 + p {
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 54px;
+}
+
+h3 + p {
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -47,8 +70,21 @@ ul {
   align-items: center;
 }
 
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.ptb120 {
+  padding: 120px 0;
+}
+
+.pl60 {
+  padding: 0 60px;
+}
+
 .btn {
-  height: 50px;
+  padding: 0 30px;
+  height: 55px;
   min-width: 160px;
   font-family: 'DM Sans', sans-serif;
   font-size: 18px;
@@ -76,29 +112,41 @@ ul {
 }
 
 .btn.btn-white {
+  font-weight: 400;
   color: #010101;
+  border: 1px solid transparent;
   background-color: #fefefe;
 }
 
 .btn.btn-white:hover {
   color: #fefefe;
+  border: 1px solid #fefefe;
   background-color: transparent;
-  box-shadow: 0 0 4px #fefefe;
 }
 
 .btn.full-width {
   width: 100%;
 }
 
+.color-white {
+  color: #fefefe;
+}
+
 /* AVADA WEBSITE */
 /* HEADER */
 header {
-  position: relative;
+  /* position: relative; */
 }
 
 /* NAVIGATION HEADER */
 .nav-header {
+  padding: 30px;
   height: 110px;
+}
+
+/* Nav Logo */
+.nav-logo img {
+  max-height: 42px;
 }
 
 /* Nav menu */
@@ -128,8 +176,25 @@ header {
 .hero::before {
   content: '';
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, .3);
+}
+
+/* Hero left */
+.hero-left {
+  position: relative;
+  max-width: 50%;
   z-index: 1;
+}
+
+.btn-white i {
+  margin-left: 5px;
+}
+
+/* Hero right */
+.hero-right {
+  /* position: absolute; */
 }
