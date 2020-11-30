@@ -53,14 +53,37 @@ ul {
   font-family: 'DM Sans', sans-serif;
   font-size: 18px;
   font-weight: 500;
+  color: #fefefe;
   background-color: #eb621f;
   border: 0;
   border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  background-color: #f76210;
 }
 
 .btn.color-op {
   color: #eb621f;
-  background-color: rgba(235, 98, 31, .2);
+  background-color: rgba(235, 98, 31, .18);
+}
+
+.btn.color-op:hover {
+  color: #fefefe;
+  background-color: #eb621f;
+}
+
+.btn.btn-white {
+  color: #010101;
+  background-color: #fefefe;
+}
+
+.btn.btn-white:hover {
+  color: #fefefe;
+  background-color: transparent;
+  box-shadow: 0 0 4px #fefefe;
 }
 
 .btn.full-width {
@@ -90,4 +113,23 @@ header {
 /* Nav contacts */
 .nav-contacts ul li:not(:last-of-type) {
   margin-right: 30px;
+}
+
+/* HERO HEADER */
+.hero {
+  position: relative;
+  height: 690px;
+  background-image: url('../images/marketing-intro.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Hero black layover */
+.hero::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1;
 }
