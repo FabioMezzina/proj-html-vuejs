@@ -684,6 +684,55 @@ img {
   font-size: 20px;
 }
 
+/* FIXED ELEMENTS */
+/* TRY - BUY BOXES */
+.try-buy {
+  position: fixed;
+  top: 150px;
+  right: 15px;
+}
+
+.try-buy span {
+  font-size: 12px;
+  color: #4a5259;
+  font-weight: 700;
+}
+
+.try-buy i {
+  font-size: 22px;
+  color: #33475b;
+}
+
+.try {
+  margin-bottom: 10px;
+}
+
+.buy .price {
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  color: #65bc7b;
+}
+
+.buy .price::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  content: '$';
+  font-size: 12px;
+}
+
+.try,
+.buy {
+  width: 65px;
+  height: 65px;
+  background-color: #fefefe;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgb(1, 1, 1, .2);
+  cursor: pointer;
+}
+
 /* HELPER */
 .helper-fixed {
   position: fixed;
@@ -698,7 +747,7 @@ img {
   padding: 35px 15px;
   max-width: 100%;
   background-color: #fefefe;
-  box-shadow: 0px 0px 20px rgb(1, 1, 1, .1);
+  box-shadow: 0px 0px 20px rgb(1, 1, 1, .2);
   border-radius: 5px;
 }
 
