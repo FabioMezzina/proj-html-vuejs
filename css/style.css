@@ -683,3 +683,72 @@ img {
 .social-wrapper i {
   font-size: 20px;
 }
+
+/* HELPER */
+.helper-fixed {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 240px;
+}
+
+/* chat */
+.chat {
+  position: relative;
+  padding: 35px 15px;
+  max-width: 100%;
+  background-color: #fefefe;
+  box-shadow: 0px 0px 20px rgb(1, 1, 1, .1);
+  border-radius: 5px;
+}
+
+.avatar,
+.avatar img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.avatar {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 50%);
+}
+
+.chat-text {
+  font-weight: 400;
+}
+
+.chat-close {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: rgba(0, 0, 0, .6);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.chat-close:hover {
+  color: rgba(247, 98, 16, .8);
+}
+
+/* message toggle button */
+.msg-button {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f76210;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.msg-button i {
+  font-size: 24px;
+  color: #fefefe;
+}
+
+.msg-button:hover {
+  box-shadow: 0px 0px 10px rgb(1, 1, 1, .5);
+}
