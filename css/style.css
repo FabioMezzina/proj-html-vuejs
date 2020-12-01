@@ -110,6 +110,11 @@ ul {
   width: calc(100% / 3);
 }
 
+.col-3 {
+  padding: 15px;
+  width: 25%;
+}
+
 /* Spacing */
 .mb20 {
   margin-bottom: 20px;
@@ -153,6 +158,10 @@ ul {
 
 .pl100 {
   padding: 0 100px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Buttons */
@@ -489,6 +498,7 @@ img {
   max-width: 100%;
 }
 
+/* wwu row 2 */
 .wwu-row-two {
   max-height: 400px;
 }
@@ -523,4 +533,22 @@ img {
 
 .wwu-row-two h5:hover {
   color: #f76210;
+}
+
+/* wwu awards */
+.award {
+  display: block;
+  max-width: 110px;
+}
+
+.award.one {
+  filter: hue-rotate(180deg);
+}
+
+.award.three {
+  filter: hue-rotate(335deg);
+}
+
+.award.four {
+  filter: hue-rotate(580deg);
 }
