@@ -583,3 +583,34 @@ img {
 .resources .orange-img + a {
   min-height: 0;
 }
+
+/* HAPPEN */
+.happen {
+  background-color: #010101;
+}
+
+.separator {
+  width: 100px;
+  height: 1px;
+  background-color: #858786;
+}
+
+.happen .hero-left em {
+  display: block;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.happen .hero-left h5 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.happen .hero-left h5 + p {
+  font-size: 14px;
+}
+
+.happen .hero-right {
+  position: static;
+  align-self: center;
+}
