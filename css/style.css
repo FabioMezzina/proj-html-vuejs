@@ -758,12 +758,17 @@ img {
 
 /* chat */
 .chat {
+  display: none;
   position: relative;
   padding: 35px 15px;
   max-width: 100%;
   background-color: #fefefe;
   box-shadow: 0px 0px 20px rgb(1, 1, 1, .2);
   border-radius: 5px;
+}
+
+.chat.visible {
+  display: block;
 }
 
 .helper-avatar,
@@ -814,5 +819,6 @@ img {
 }
 
 .msg-button:hover {
-  box-shadow: 0px 0px 10px rgb(1, 1, 1, .5);
+  box-shadow: 0px 0px 10px rgba(247, 98, 16, .7);
+  /* box-shadow: 0px 0px 10px rgb(1, 1, 1, .5); */
 }
