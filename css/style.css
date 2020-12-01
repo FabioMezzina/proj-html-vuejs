@@ -479,7 +479,7 @@ z-index: 1;
 
 /* WORK WITH US */
 .work-with-us {
-  background-image: linear-gradient(0deg, #fefefe 0%, #f7f7f9 100%);
+  background-image: linear-gradient(45deg, #fefefe 0%, #f7f7f9 100%);
 }
 
 .wwu-left {
@@ -551,4 +551,22 @@ img {
 
 .award.four {
   filter: hue-rotate(580deg);
+}
+
+/* TESTIMONIAL */
+.testimonial-text {
+  padding: 120px;
+}
+
+.testimonial-text h4 {
+  font-size: 32px;
+}
+
+.testimonial-text h5 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.testimonial-text p {
+  font-size: 14px;
 }
