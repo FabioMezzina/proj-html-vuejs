@@ -242,8 +242,6 @@ header {
 
 /* Nav menu */
 .nav-menu ul li {
-  display: flex; /*debug*/
-  align-items: center; /*debug*/
   height: 40px;
   line-height: 40px;
   padding: 2px 8px;
@@ -253,7 +251,7 @@ header {
 }
 
 .nav-menu ul li:not(:first-of-type) {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .nav-menu ul li:hover {
@@ -264,6 +262,11 @@ header {
 /* Nav contacts */
 .nav-contacts ul li:not(:last-of-type) {
   margin-right: 30px;
+}
+
+.nav-menu ul li i {
+  margin-left: 10px;
+  font-size: 12px;
 }
 
 .nav-contacts i {
@@ -624,6 +627,12 @@ img {
 }
 
 /* FOOTER */
+.footer a:hover,
+.footer span:hover {
+  color: rgba(0, 0, 0, .7);
+  transition: .1s;
+}
+
 .footer a span {
   font-size: 20px;
   font-weight: 400;
@@ -674,5 +683,3 @@ img {
 .social-wrapper i {
   font-size: 20px;
 }
-
-/* services */
