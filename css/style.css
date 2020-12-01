@@ -56,6 +56,11 @@ h5 {
   
 }
 
+h6 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -287,7 +292,8 @@ header {
 }
 
 /* Hero left */
-.hero-left {
+.hero-left,
+.happen-left {
   position: relative;
   max-width: 50%;
   z-index: 1;
@@ -298,12 +304,14 @@ header {
 }
 
 /* Hero right */
-.hero-right {
-align-self: flex-end;
-position: relative;
-bottom: -50px;
-box-shadow: 0px 20px 20px rgb(1, 1, 1, .1);
-z-index: 1;
+.hero-right,
+.happen-right {
+  margin: 0 auto;
+  align-self: flex-end;
+  position: relative;
+  bottom: -50px;
+  box-shadow: 0px 20px 20px rgb(1, 1, 1, .1);
+  z-index: 1;
 }
 
 .consultant {
@@ -595,22 +603,76 @@ img {
   background-color: #858786;
 }
 
-.happen .hero-left em {
+.happen .happen-left em {
   display: block;
   font-size: 22px;
   line-height: 1.5;
 }
 
-.happen .hero-left h5 {
+.happen .happen-left h5 {
   font-size: 20px;
   line-height: 1.5;
 }
 
-.happen .hero-left h5 + p {
+.happen .happen-left h5 + p {
   font-size: 14px;
 }
 
-.happen .hero-right {
+.happen .happen-right {
   position: static;
   align-self: center;
 }
+
+/* FOOTER */
+.footer a span {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(1, 1, 1, .9);
+}
+
+.footer-nav-category {
+  margin-bottom: 30px;
+}
+
+.footer-social,
+.copyright {
+  width: 40%;
+}
+
+.footer-services,
+.footer-resources,
+.footer-company,
+.call-us,
+.email-us {
+  width: 20%;
+}
+
+.email-us {
+  margin-left: 20%;
+}
+
+/* social */
+.social-wrapper {
+  margin-right: 20%;
+}
+
+.social-wrapper h4 {
+  font-size: 32px;
+}
+
+.social-wrapper ul li:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.social-wrapper ul li a {
+  display: block;
+  padding-left: 5px;
+  height: 25px;
+  width: 25px;
+}
+
+.social-wrapper i {
+  font-size: 20px;
+}
+
+/* services */
