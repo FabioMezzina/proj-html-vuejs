@@ -18,13 +18,15 @@
 <body>
   <div id="avada">
     <!-- HEADER -->
-    <header>
+    <header class="mb160">
       <!-- NAVIGATION HEADER -->
       <nav class="nav-header">
         <div class="container flex jc-around ai-center">
           <!-- Nav Logo -->
           <div class="nav-logo">
-            <img src="./images/avada-marketing-logo-2x.png" alt="Avada">
+            <a href="./index.html">
+              <img src="./images/avada-marketing-logo-2x.png" alt="Avada">
+            </a>
           </div>
           <!-- Nav Menu -->
           <div class="nav-menu">
@@ -82,7 +84,7 @@
           <!-- Hero Right -->
           <div class="hero-right consultant flex fd-col ai-center">
             <div class="avatar flex jc-center mb20">
-              <span class="img-wrapper">
+              <span class="avatar-img-wrapper">
                 <img src="./images/marketing-consultant-expert.jpg" alt="Marketing Expert">
               </span>
             </div>
@@ -114,10 +116,10 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main-content ptb120">
+    <main class="main-content">
       <div class="container flex fd-col">
         <!-- WHAT WE DO -->
-        <section class="what-we-do flex fd-col p100">
+        <section class="what-we-do flex fd-col pl100 mb300">
           <!-- row 1 -->
           <div class="wwd-row flex jc-between ai-center mb300">
             <!-- What we do - left -->
@@ -172,9 +174,83 @@
 
         </section>
         <!-- COLLABORATIONS -->
-        <section class="collaborations"></section>
+        <section class="collaborations flex fd-col ai-center mb160">
+          <h3 class="mb20">Some Brands We Work With</h3>
+          <p class="mb40">Quisque aliquet, libero consequat elementum convallis.</p>
+          <div class="brands-img-wrapper flex jc-evenly mb160">
+            <a href="#">
+              <img src="./images/abstract.png" alt="Abstract">
+            </a>
+            <a href="#">
+              <img src="./images/cglobal.png" alt="CGlobal">
+            </a>
+            <a href="#">
+              <img src="./images/next.png" alt="Next">
+            </a>
+            <a href="#">
+              <img src="./images/hemisferio.png" alt="Hemisferio">
+            </a>
+            <a href="#">
+              <img src="./images/spaces.png" alt="Spaces">
+            </a>
+            <a href="#">
+              <img src="./images/digitalbox.png" alt="Digital-Box">
+            </a>
+          </div>
+          <div class="consultant sandy flex jc-between ai-center">
+            <div class="avatar flex jc-center">
+              <span class="avatar-img-wrapper">
+                <img src="./images/marketing-expert-cta.png" alt="Marketing Expert">
+              </span>
+              <div class="name flex fd-col jc-center">
+                <h5>Sandy Reiff</h5>
+                <div class="consultant-title">
+                  <span>Marketing Consultant Expert</span>
+                </div>
+              </div>
+            </div>
+            <h4>Drive Leads and Sales with Avada</h4>
+            <button class="btn color-op">(555) 802-1234</button>
+          </div>
+
+        </section>
         <!-- FEEDBACKS -->
-        <section class="feedbacks"></section>
+        <section class="feedbacks flex fd-col ai-center mb120">
+          <h3 class="mb100">Trusted by Leading Organisations</h3>
+          <div class="fdb-row flex mb80">
+            <div class="col-4">
+              <div class="fdb-img">
+                <a href="#">
+                  <img src="./images/case-studies-1-600x675.jpg" alt="Spaces">
+                </a>
+              </div>
+              <a href="#">How Spaces attracted five millions visitors by improving the content</a>
+              <h3>200%</h3>
+              <p>Higher revenue from digital</p>
+            </div>
+            <div class="col-4">
+              <div class="fdb-img">
+                <a href="#">
+                  <img src="./images/case-studies-4-600x675.jpg" alt="Hemisferio">
+                </a>
+              </div>
+              <a href="#">Creativity helped Hemisferio to increase their brand reach verticality</a>
+              <h3>10x</h3>
+              <p>Sales increse with the same ad spend</p>
+            </div>
+            <div class="col-4">
+              <div class="fdb-img">
+                <a href="#">
+                  <img src="./images/case-studies-6-600x675.jpg" alt="DigitalBox">
+                </a>
+              </div>
+              <a href="#">How DigitalBox used AI-powered data insight to boost sales</a>
+              <h3>3-year</h3>
+              <p>Partnership with Avada Consultant</p>
+            </div>
+          </div>
+          <button class="btn">Read More Case Studies</button>
+        </section>
       </div>
     </main>
   
