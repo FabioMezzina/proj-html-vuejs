@@ -532,6 +532,7 @@ img {
   color: #f76210;
   border: 2px solid #f76210;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .wwu-description {
@@ -541,7 +542,17 @@ img {
 
 .wwu-icon i {
   font-size: 30px;
+  transition: .15s;
 }
+
+.wwu-icon:hover i {
+  font-size: 36px;
+}
+
+.wwu-icon:hover + div > h5 {
+  color: #f76210;
+}
+
 .wwu-row-two h5{
   transition: .2s;
 }
@@ -569,6 +580,10 @@ img {
 }
 
 /* TESTIMONIAL */
+.testimonial-image img {
+  border-radius: 10px;
+}
+
 .testimonial-text {
   padding: 120px;
 }
