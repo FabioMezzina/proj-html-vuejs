@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avada Consultant</title>
+  <link rel="shortcut icon" href="./images/mc-favicon.png">
+  <title>Avada Marketing Consultant</title>
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
@@ -479,11 +480,11 @@
           </div>
           <!-- call us -->
           <div class="call-us">
-            <p>Call Us (555) 802-1234</p>
+            <p>Call Us {{ consultantPhoneNumber }}</p>
           </div>
           <!-- email us -->
           <div class="email-us">
-            <p>info@yourcompany.com</p>
+            <a :href="`mailto:${avadaEmail}`">{{ avadaEmail }}</a>
           </div>
         </div>
       </div>

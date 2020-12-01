@@ -6,6 +6,7 @@ const avada = new Vue({
   data: {
     avadaLogo: './images/avada-marketing-logo-2x.png',
     consultantPhoneNumber: '(555) 802-1234',
+    avadaEmail: 'info@yourcompany.com',
     helperVisible: false,
     // header menu list
     headerMenu: [
