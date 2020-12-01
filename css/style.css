@@ -751,14 +751,14 @@ img {
   border-radius: 5px;
 }
 
-.avatar,
-.avatar img {
+.helper-avatar,
+.helper-avatar img {
   border-radius: 50%;
   height: 50px;
   width: 50px;
 }
 
-.avatar {
+.helper-avatar {
   position: absolute;
   left: 50%;
   bottom: 100%;
