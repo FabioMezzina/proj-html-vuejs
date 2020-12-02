@@ -77,6 +77,15 @@ body {
 }
 
 /* Nav menu */
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fefefe;
+  z-index: 3;
+}
+
 .nav-menu ul li.menu-item {
   position: relative;
   padding: 2px 8px;
@@ -105,8 +114,8 @@ body {
   left: 0;
   max-width: 250px;
   white-space: nowrap;
-  background-color: rgb(254, 254, 254, .9);
-  box-shadow: 0 15px 20px rgb(1, 1, 1, .8);
+  background-color: rgb(254, 254, 254, 1);
+  box-shadow: 0 5px 6px rgb(1, 1, 1, .4);
   border-radius: 5px;
   z-index: 2;
 }
@@ -142,6 +151,7 @@ body {
 /* HERO HEADER */
 .hero {
   position: relative;
+  margin-top: 110px;
   height: 690px;
   background-image: url('../images/marketing-intro.jpg');
   background-size: cover;
