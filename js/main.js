@@ -12,27 +12,67 @@ const avada = new Vue({
     headerMenu: [
       {
         title: 'Home',
-        hasMenu: true,
+        showSubMenu: false,
+        subMenu: [
+          {
+            title: 'Home alternative',
+            link: '#',
+          },
+          {
+            title: 'Home alternative 2',
+            link: '#',
+          },
+          {
+            title: 'Home alternative 3',
+            link: '#',
+          },
+        ],
       },
       {
         title: 'Services',
-        hasMenu: true,
+        showSubMenu: false,
+        subMenu: [
+          {
+            title: 'Strategic Marketing Plan',
+            link: '#',
+          },
+          {
+            title: 'Sales Development',
+            link: '#',
+          },
+          {
+            title: 'Digital Marketing',
+            link: '#',
+          },
+        ],
       },
       {
         title: 'Why Us',
-        hasMenu: false,
+        showSubMenu: false,
+        subMenu: [
+
+        ],
       },
       {
         title: 'Case Studies',
-        hasMenu: false,
+        showSubMenu: false,
+        subMenu: [
+
+        ],
       },
       {
         title: 'About',
-        hasMenu: false,
+        showSubMenu: false,
+        subMenu: [
+
+        ],
       },
       {
         title: 'Blog',
-        hasMenu: false,
+        showSubMenu: false,
+        subMenu: [
+
+        ],
       },
     ],
     // social networks list
@@ -94,6 +134,6 @@ const avada = new Vue({
     },
     closeHelper() {
       this.helperVisible = false;
-    }
+    },
   }
 }); // <- End Vue instance

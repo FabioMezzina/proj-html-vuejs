@@ -11,6 +11,7 @@
   <!-- FontAwesome -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'/>
   <!-- Styles -->
+  <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/style.css">
   <!-- Vue.js -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -32,12 +33,23 @@
           <!-- Nav Menu -->
           <div class="nav-menu">
             <ul class="flex">
-              <li class="flex ai-center"
+              <li class="menu-item flex ai-center"
                   v-for="menu in headerMenu"
+                  @mouseover="menu.showSubMenu = true"
+                  @mouseleave="menu.showSubMenu = false"
               >
                 <a href="#">{{ menu.title }}</a>
                 <i class="fas fa-chevron-down"
-                  v-if="menu.hasMenu"></i>
+                  v-if="menu.subMenu.length > 0"></i>
+                <div :class="['sub-menu', {visible: menu.showSubMenu}]"
+                      v-if="menu.subMenu.length > 0">
+                  <ul>
+                    <li class="sub-menu-item"
+                        v-for="subItem in menu.subMenu">
+                      <a :href="subItem.link">{{ subItem.title }}</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -494,11 +506,21 @@
     <!-- TRY - BUY BOXES-->
     <div class="try-buy">
       <div class="try flex fd-col jc-evenly ai-center">
-        <i class="fas fa-id-card-alt"></i>
-        <span>Demo</span>
+        <div class="try-scroll-wrapper">
+          <div class="scroll">
+            <i class="fas fa-id-card-alt"></i>
+            <i class="fas fa-id-card-alt"></i>
+          </div>
+        </div>
+        <span>Demos</span>
       </div>
       <div class="buy flex fd-col jc-evenly ai-center">
-        <p class="price">39</p>
+        <div class="buy-scroll-wrapper">
+          <div class="scroll">
+            <span class="price">39</span>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
         <span>On Sale</span>
       </div>
     </div>
