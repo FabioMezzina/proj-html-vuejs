@@ -527,13 +527,43 @@
     <!-- HELPER -->
     <div class="helper-fixed">
       <!-- chat -->
-      <div :class="['chat', 'mb20', {visible: helperVisible}]">
-        <div class="helper-avatar">
-          <img src="./images/marketing-expert-cta.png" alt="marketing expert">
+      <div :class="['chat', 'mb20', {'visible': helperVisible}, {'support': showSupport}]">
+        <!-- welcome chat box -->
+        <div class="welcome-chat" v-if="!showSupport">
+          <div class="helper-avatar">
+            <img src="./images/marketing-expert-cta.png" alt="marketing expert">
+          </div>
+          <div class="chat-text">This is a free HubSpot live chat. You can create your own chat flows and engage your customers with Avada & HubSpot!
+            <button class="open-support" @click="showSupport = true">
+              Start
+            </button>
+          </div>
+          <div class="chat-close" @click="closeHelper">
+            <i class="fas fa-times"></i>
+          </div>
         </div>
-        <div class="chat-text">This is a free HubSpot live chat. You can create your own chat flows and engage your customers with Avada & HubSpot!</div>
-        <div class="chat-close" @click="closeHelper">
-          <i class="fas fa-times"></i>
+        <!-- support chat box-->
+        <div class="support-chat flex fd-col" v-else>
+          <div class="messages-box flex fd-col f-grow">
+            <div :class="['message', {send: message.type}]"
+                v-for="message in messages"
+            >
+              {{ message.text }}
+            </div>
+          </div>
+          <div class="send-message-box flex">
+            <input class="input-msg f-grow" type="text"
+                  placeholder="Your message here..."
+                  v-model="messageText"
+                  @keyup.enter="sendMessage"
+            >
+            <button class="send-msg" @click="sendMessage">
+              Send
+            </button>
+          </div>
+          <div class="chat-close" @click="closeHelper">
+            <i class="fas fa-times"></i>
+          </div>
         </div>
       </div>
       <!-- message toggle button -->

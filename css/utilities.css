@@ -94,6 +94,10 @@ ul {
   align-self: stretch;
 }
 
+.f-grow {
+  flex-grow: 1;
+}
+
 .col-6 {
   padding: 0 25px;
   width: 50%;

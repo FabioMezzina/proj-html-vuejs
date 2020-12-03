@@ -8,6 +8,9 @@ const avada = new Vue({
     consultantPhoneNumber: '(555) 802-1234',
     avadaEmail: 'info@yourcompany.com',
     helperVisible: false,
+    showSupport: false,
+    messageText: '',
+    answerText: '',
     // header menu list
     headerMenu: [
       {
@@ -127,13 +130,65 @@ const avada = new Vue({
         'Contact Us',
         'Careers',
       ],
+      // answer list
+      answers: [
+        'Hello',
+        'Not interested',
+        'I\'m busy right now',
+        'Tell me more',
+        'Interesting...',
+      ],
+      // messages history (true = 'send')
+      messages: []
   }, // <- End Data
   methods: {
+    // open helper chat
     openHelper() {
       this.helperVisible = true;
     },
+    // close helper chat
     closeHelper() {
       this.helperVisible = false;
     },
+    /**
+     * Send a message
+     */
+    sendMessage() {
+      if(this.messageText.trim()) {
+        const message = {
+          text: this.messageText,
+          type: true,
+        };
+        this.messageText = '';
+        this.messages.push(message);
+        this.answerMessage();
+      }
+    },
+    /**
+     * send an automatic answer to the user
+     */
+    answerMessage() {
+      setTimeout(() => {
+        if(this.messages.length < 2) {
+          console.log('entro');
+          this.answerText = this.answers[0];
+        } else {
+          this.answerText = this.answers[this.randomNumber(1, this.answers.length - 1)];
+        }
+        const answer = {
+          text: this.answerText,
+          type: false,
+        }
+        this.messages.push(answer);
+      }, 500);
+    },
+    /**
+     * Give a random whole number between min and max
+     * @param {number} min 
+     * @param {number} max 
+     */
+    randomNumber(min = 0, max = 1) {
+      return Math.floor(Math.random() * (max - min + 1)) + 1;
+    }
   }
 }); // <- End Vue instance

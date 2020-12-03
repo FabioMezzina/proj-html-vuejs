@@ -121,7 +121,7 @@ body {
 }
 
 .nav-menu ul li .sub-menu li {
-  color: #010101;
+  color: rgba(1, 1, 1, .8);
   transition: .2s;
 }
 
@@ -585,6 +585,7 @@ img {
   position: fixed;
   top: 150px;
   right: 15px;
+  z-index: 3;
 }
 
 .try-buy span {
@@ -664,6 +665,7 @@ img {
   bottom: 15px;
   right: 15px;
   width: 240px;
+  z-index: 3;
 }
 
 /* chat */
@@ -679,6 +681,27 @@ img {
 
 .chat.visible {
   display: block;
+}
+
+.chat.support {
+  background-color: rgba(73, 86, 83, .5);;
+  padding: 0;
+}
+
+.open-support {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  margin-left: 10px;
+  color: rgba(247, 98, 16, .7);
+  border: 0;
+  background-color: #fefefe;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.open-support:hover {
+  color: rgba(247, 98, 16, 1);
+  transform: scale(1.1);
 }
 
 .helper-avatar,
@@ -709,11 +732,85 @@ img {
   right: 7px;
   color: rgba(0, 0, 0, .6);
   cursor: pointer;
-  transition: .2s;
+  transition: .3s;
 }
 
 .chat-close:hover {
   color: rgba(247, 98, 16, .8);
+}
+
+/* support chat box */
+.support-chat {
+  height: 350px;
+  background-color: rgba(254, 254, 254, .8);
+  border: 2px solid rgba(73, 86, 83, .4);
+  border-radius: 5px;
+}
+
+.messages-box {
+  padding: 10px 8px;
+  overflow: auto;
+}
+
+.message {
+  align-self: flex-start;
+  margin-bottom: 8px;
+  padding: 1px 5px;
+  max-width: 60%;
+  font-size: .75rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .8);
+  word-wrap: break-word;
+  border: 1px solid #495653;
+  border-radius: 5px;
+  background-color: rgba(73, 86, 83, .4);
+}
+
+.message.send {
+  align-self: flex-end;
+  background-color: rgb(247, 98, 16, .7);
+}
+
+.send-message-box {
+  text-align: right;
+  padding: 7px 8px 5px;
+  background-color: rgba(73, 86, 83, .4);
+}
+
+.input-msg {
+  padding: 0 5px;
+  font-size: .75rem;
+  color: #495653;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgba(254, 254, 254, .7);
+  transition: .2s;
+}
+
+.input-msg:hover,
+.input-msg:focus {
+  background-color: rgba(254, 254, 254, 1);
+}
+
+.send-msg {
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: .75rem;
+  color: rgba(254, 254, 254, .7);
+  background-color: rgb(247, 98, 16, .7);
+  border: 0;
+  border-radius: 5px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.send-msg:hover {
+  color: rgba(254, 254, 254, 1);
+  background-color: rgb(247, 98, 16, 1);
+}
+
+.support-chat .chat-close {
+  top: -25px;
 }
 
 /* message toggle button */
