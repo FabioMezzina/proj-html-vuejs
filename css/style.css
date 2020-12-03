@@ -726,19 +726,6 @@ img {
   color: rgba(0, 0, 0, .7);
 }
 
-.chat-close {
-  position: absolute;
-  top: 5px;
-  right: 7px;
-  color: rgba(0, 0, 0, .6);
-  cursor: pointer;
-  transition: .3s;
-}
-
-.chat-close:hover {
-  color: rgba(247, 98, 16, .8);
-}
-
 /* support chat box */
 .support-chat {
   height: 350px;
@@ -809,8 +796,22 @@ img {
   background-color: rgb(247, 98, 16, 1);
 }
 
-.support-chat .chat-close {
+/* chat close item */
+.chat-close {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: rgba(0, 0, 0, .6);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.support-chat + .chat-close {
   top: -25px;
+}
+
+.chat-close:hover {
+  color: rgba(247, 98, 16, .8);
 }
 
 /* message toggle button */

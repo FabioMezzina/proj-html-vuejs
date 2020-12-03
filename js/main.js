@@ -108,27 +108,66 @@ const avada = new Vue({
     // services list
     servicesList:
       [
-        'Marketing Plan',
-        'Sales Development',
-        'Digital Marketing',
-        'Pricing',
-        'Why Us',
-        'Case Studies',
+        {
+          title: 'Marketing Plan',
+          link: '#',
+        },
+        {
+          title: 'Sales Development',
+          link: '#',
+        },
+        {
+          title: 'Digital Marketing',
+          link: '#',
+        },
+        {
+          title: 'Pricing',
+          link: '#',
+        },
+        {
+          title: 'Why Us',
+          link: '#',
+        },
+        {
+          title: 'Case Studies',
+          link: '#',
+        },
       ],
     // resources list
     resourcesList:
       [
-        'Learning Center',
-        'Video Tutorials',
-        'Customers',
-        'Blog',
+        {
+          title: 'Learning Center',
+          link: '#',
+        },
+        {
+          title: 'Video Tutorials',
+          link: '#',
+        },
+        {
+          title: 'Customers',
+          link: '#',
+        },
+        {
+          title: 'Blog',
+          link: '#',
+        },
       ],
     // company menu list
     infosList:
       [
-        'Who We Are',
-        'Contact Us',
-        'Careers',
+        {
+          title: 'Who We Are',
+          link: '#',
+        },
+        {
+          title: 'Contact Us',
+          link: '#',
+        },
+        {
+          title: 'Careers',
+          link: '#',
+        },
       ],
       // answer list
       answers: [
@@ -170,7 +209,6 @@ const avada = new Vue({
     answerMessage() {
       setTimeout(() => {
         if(this.messages.length < 2) {
-          console.log('entro');
           this.answerText = this.answers[0];
         } else {
           this.answerText = this.answers[this.randomNumber(1, this.answers.length - 1)];
@@ -187,7 +225,7 @@ const avada = new Vue({
      * @param {number} min 
      * @param {number} max 
      */
-    randomNumber(min = 0, max = 1) {
+    randomNumber(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + 1;
     }
   }

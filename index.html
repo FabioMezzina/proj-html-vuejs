@@ -41,7 +41,7 @@
                 <a href="#">{{ menu.title }}</a>
                 <i class="fas fa-chevron-down"
                   v-if="menu.subMenu.length > 0"></i>
-                <div :class="['sub-menu', {visible: menu.showSubMenu}]"
+                <div :class="['sub-menu', {'visible': menu.showSubMenu}]"
                       v-if="menu.subMenu.length > 0">
                   <ul>
                     <li class="sub-menu-item"
@@ -456,7 +456,7 @@
             <nav class="footer-nav">
               <ul>
                 <li class="mb20" v-for="service in servicesList">
-                  <a href="#"><span>{{ service }}</span></a>
+                  <a :href="service.link"><span>{{ service.title }}</span></a>
                 </li>
               </ul>
             </nav>
@@ -467,7 +467,7 @@
             <nav class="footer-nav">
               <ul>
                 <li class="mb20" v-for="resource in resourcesList">
-                  <a href="#"><span>{{ resource }}</span></a>
+                  <a :href="resource.link"><span>{{ resource.title }}</span></a>
                 </li>
               </ul>
             </nav>
@@ -478,7 +478,7 @@
             <nav class="footer-nav">
               <ul>
                 <li class="mb20" v-for="info in infosList">
-                  <a href="#"><span>{{ info }}</span></a>
+                  <a :href="info.link"><span>{{ info.title }}</span></a>
                 </li>
               </ul>
             </nav>
@@ -527,7 +527,7 @@
     <!-- HELPER -->
     <div class="helper-fixed">
       <!-- chat -->
-      <div :class="['chat', 'mb20', {'visible': helperVisible}, {'support': showSupport}]">
+      <div :class="['chat', 'mb20', {'visible': helperVisible, 'support': showSupport}]">
         <!-- welcome chat box -->
         <div class="welcome-chat" v-if="!showSupport">
           <div class="helper-avatar">
@@ -538,14 +538,11 @@
               Start
             </button>
           </div>
-          <div class="chat-close" @click="closeHelper">
-            <i class="fas fa-times"></i>
-          </div>
         </div>
         <!-- support chat box-->
         <div class="support-chat flex fd-col" v-else>
           <div class="messages-box flex fd-col f-grow">
-            <div :class="['message', {send: message.type}]"
+            <div :class="['message', {'send': message.type}]"
                 v-for="message in messages"
             >
               {{ message.text }}
@@ -561,9 +558,10 @@
               Send
             </button>
           </div>
-          <div class="chat-close" @click="closeHelper">
-            <i class="fas fa-times"></i>
-          </div>
+        </div>
+        <!-- chat close item -->
+        <div class="chat-close" @click="closeHelper">
+          <i class="fas fa-times"></i>
         </div>
       </div>
       <!-- message toggle button -->
